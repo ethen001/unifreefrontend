@@ -6,7 +6,7 @@ cache:
     - "node_modules"
 env:
   global:
-    - d3e57243f2ef10b1c2c7cfbe7103cef5a2dc394a28a64211fbeb1512ca017413
+    - CC_TEST_REPORTER_ID = d3e57243f2ef10b1c2c7cfbe7103cef5a2dc394a28a64211fbeb1512ca017413
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64  > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
@@ -14,5 +14,4 @@ before_script:
 script:
   - npm run test
 after_script:
-  - ./cc-test-reporter after-build 
-  - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter upload-coverage; fi  # Upload coverage/codeclimate.json
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

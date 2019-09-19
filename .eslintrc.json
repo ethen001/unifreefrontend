@@ -1,45 +1,45 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true,
-        "jest": true
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "parser": "babel-eslint",
-    "extends": [
-        "airbnb"
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 120
+      }
     ],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2018,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
+    "prefer-promise-reject-errors": [
+      "off"
     ],
-    "rules": {
-        "max-len": [
-            "error",
-            {
-                "code": 120
-            }
-        ],
-        "prefer-promise-reject-errors": [
-            "off"
-        ],
-        "react/jsx-filename-extension": [
-            "off"
-        ],
-        "react/prop-types": [
-            "warn"
-        ],
-        "no-return-assign": [
-            "off"
-        ]
-    }
+    "react/jsx-filename-extension": [
+      "off"
+    ],
+    "react/prop-types": [
+      "warn"
+    ],
+    "no-return-assign": [
+      "off"
+    ]
+  }
 }
